@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;}
+body{
+    display:flex;
+    min-height: 100vh;
+    justify-content: center;                    
+    align-items: center;
+    background-color:#EEE;
+
+}
+
+.container{
+    
+
+width:800px;
+height:600px;
+display:grid;
+grid-template-columns: repeat(2,1fr 1fr);
+grid-template-rows: repeat(2,1fr 1fr);
+grid-template-areas: "top top" "left right";
+
+}
+.top{
+    grid-area:top;
+    background-color: white;
+  padding:40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+.left{
+    grid-area: left;
+
+}
+.right{
+    grid-area:right;
+}
+/* start top*/
+.top h1{
+    color:hsl(179, 62%, 43%);
+    margin-bottom: 20px;
+
+}
+.top h3{
+    color:hsl(71, 73%, 54%);
+}
+.top p {
+    width:550px;
+    margin-top:10px;
+    color:hsl(218, 22%, 67%);
+    line-height: 1.6;
+    font-size:1em;
+    
+}
+    
+
+    
+ 
+/* end top*/
+/* start left */
+.left{
+    width:400px;
+    background-color: hsl(179, 62%, 43%);
+    border-bottom-left-radius: 10px;
+   text-align: left;
+   
+
+    color:white;
+}
+
+.dollar{
+    font-size:30px;
+}
+.per{
+font-weight:lighter;
+}
+.button{
+    width:300px;
+    background-color: hsl(71, 73%, 54%);
+    height:50px;
+    border-radius:5px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:50px;
+    margin-bottom: 20px;
+    margin-top:10px;
+    
+    box-shadow:  2px 2px 8px rgba(0, 0, 0, 0.25);
+    
+    
+}
+.left * {
+    padding:20px;
+    text-indent: 20px;
+    
+}
+/*end left*/
+
+/*start right*/
+.right{
+    width:400px;
+    background-color: hsl(179, 79%, 50%);  
+ border-bottom-right-radius: 10px;
+ padding:40px;
+ color:white;
+
+}
+ul{
+    margin-top:20px;
+    list-style-type: none;
+    
+}
+.content{
+    margin-top:10px;}
+
+/*end right*/
+
+@media (max-width:375px) {
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.top,.left,.right{
+    width:350px;
+}
+
+.top p,h1{ width: fit-content;
+  
+    
+}
+.button{
+    position: relative;
+    right:50px;
+    padding-right:50px;
+}
+.button:hover{
+    color:green;
+}
+
+
+}
+
